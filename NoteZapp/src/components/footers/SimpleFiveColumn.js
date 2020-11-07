@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
-import LogoImage from "../../images/logo.svg";
+import LogoImage from "../../images/logo-full.png";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
@@ -41,10 +41,10 @@ export default () => {
         <WideColumn>
           <LogoContainer>
             <LogoImg src={LogoImage} />
-            <LogoText>Treact Inc.</LogoText>
+            <LogoText>NoteZApp!</LogoText>
           </LogoContainer>
           <CompanyDescription>
-            Treact is an Internet Technology company providing design resources such as website templates and themes.
+            A Notes Sharing App.
           </CompanyDescription>
           <SocialLinksContainer>
             <SocialLink href="https://facebook.com">
@@ -61,9 +61,6 @@ export default () => {
         <Column>
           <ColumnHeading>Quick Links</ColumnHeading>
           <LinkList>
-            <LinkListItem>
-              <Link href="#">Blog</Link>
-            </LinkListItem>
             <LinkListItem>
               <Link href="#">FAQs</Link>
             </LinkListItem>
@@ -82,22 +79,19 @@ export default () => {
               <Link href="#">Log In</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="#">Personal</Link>
+              <Link href="#">Sign Up</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="#">Business</Link>
+              <Link href="#">Features</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="#">Team</Link>
+              <Link href="#">Testimonials</Link>
             </LinkListItem>
           </LinkList>
         </Column>
         <Column>
           <ColumnHeading>Legal</ColumnHeading>
           <LinkList>
-            <LinkListItem>
-              <Link href="#">GDPR</Link>
-            </LinkListItem>
             <LinkListItem>
               <Link href="#">Privacy Policy</Link>
             </LinkListItem>
