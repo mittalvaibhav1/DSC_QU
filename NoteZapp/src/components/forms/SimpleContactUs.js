@@ -40,8 +40,8 @@ export default () => {
       <Content>
         <FormContainer>
           <div tw="mx-auto max-w-4xl">
-            <h2>Organize an Event</h2>
-            <form action="#">
+            <h2>Need Help? Write it down</h2>
+            <form id="contact" action="#">
               <TwoColumn>
                 <Column>
                   <InputContainer>
@@ -50,13 +50,13 @@ export default () => {
                   </InputContainer>
                   <InputContainer>
                     <Label htmlFor="email-input">Your Email Address</Label>
-                    <Input id="email-input" type="email" name="email" placeholder="E.g. john@mail.com" />
+                    <Input id="email-input" type="email" name="email" placeholder="E.g. john.doe@mail.com" />
                   </InputContainer>
                 </Column>
                 <Column>
                   <InputContainer tw="flex-1">
                     <Label htmlFor="name-input">Your Message</Label>
-                    <TextArea id="message-input" name="message" placeholder="E.g. Details about your event"/>
+                    <TextArea id="message-input" name="message" placeholder="E.g. Any issues you're facing?"/>
                   </InputContainer>
                 </Column>
               </TwoColumn>
