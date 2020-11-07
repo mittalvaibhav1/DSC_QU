@@ -81,7 +81,7 @@ export default () => {
       quote:
         "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
       customerName: "Charlotte Hale",
-      customerTitle: "CEO, Delos Inc."
+      customerTitle: "3rd Sem , CSE"
     },
     {
       imageSrc:
@@ -89,7 +89,7 @@ export default () => {
       quote:
         "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
       customerName: "Adam Cuppy",
-      customerTitle: "Founder, EventsNYC"
+      customerTitle: "6th Sem , CSE"
     },
     {
       imageSrc:
@@ -97,14 +97,14 @@ export default () => {
       quote:
         "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
       customerName: "Steven Marcetti",
-      customerTitle: "Event Manager, Brite"
+      customerTitle: "3rd Sem , ECE"
     }
   ];
   return (
     <Container>
       <Content>
         <HeadingInfoContainer>
-          <HeadingTitle>Our Awesome Customers</HeadingTitle>
+          <HeadingTitle>Our Awesome Users</HeadingTitle>
           <HeadingDescription></HeadingDescription>
         </HeadingInfoContainer>
         <TestimonialSliderContainer>
