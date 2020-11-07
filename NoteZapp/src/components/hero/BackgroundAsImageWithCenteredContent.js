@@ -49,7 +49,7 @@ export default () => {
       </NavLink>
     </NavLinks>,
     <NavLinks key={2}>
-      <PrimaryLink href="/#">
+      <PrimaryLink href="/pages/Login.js">
        Sign Up
       </PrimaryLink>
     </NavLinks>

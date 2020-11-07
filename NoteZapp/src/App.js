@@ -66,13 +66,14 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 
 import EventLandingPage from "demos/EventLandingPage.js";
 /* Inner Pages */
-// import LoginPage from "pages/Login.js";
+import LoginPage from "pages/Login.js";
 // import SignupPage from "pages/Signup.js";
 // import AboutUsPage from "pages/AboutUs.js";
 // import ContactUsPage from "pages/ContactUs.js";
 
 import ComponentRenderer from "ComponentRenderer.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Login from "pages/Login.js";
 
 export default function App() {
   // return <AnimationRevealPage disabled></AnimationRevealPage>;
@@ -84,6 +85,9 @@ export default function App() {
         </Route>
         <Route path="/components/:type/:name">
           <ComponentRenderer />
+        </Route>
+        <Route path="/pages/:name">
+          <Login/>
         </Route>
         <Route path="/">
           <EventLandingPage />
