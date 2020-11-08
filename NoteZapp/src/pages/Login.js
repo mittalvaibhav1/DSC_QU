@@ -4,8 +4,8 @@ import { Container as ContainerBase } from "components/misc/Layouts";
 import tw from "twin.macro";
 import styled from "styled-components";
 import {css} from "styled-components/macro"; //eslint-disable-line
-import illustration from "images/login-illustration.svg";
-import logo from "images/logo.svg";
+import illustration from "images/edu.svg";
+import logo from "images/logo-full.png";
 import googleIconImageSrc from "images/google-icon.png";
 import twitterIconImageSrc from "images/twitter-icon.png";
 import { ReactComponent as LoginIcon } from "feather-icons/dist/icons/log-in.svg";
@@ -50,26 +50,21 @@ const SubmitButton = styled.button`
 const IllustrationContainer = tw.div`sm:rounded-r-lg flex-1 bg-purple-100 text-center hidden lg:flex justify-center`;
 const IllustrationImage = styled.div`
   ${props => `background-image: url("${props.imageSrc}");`}
-  ${tw`m-12 xl:m-16 w-full max-w-sm bg-contain bg-center bg-no-repeat`}
+  ${tw`m-12 xl:m-12 w-full max-w-xl bg-contain bg-center bg-no-repeat`}
 `;
 
 export default ({
   logoLinkUrl = "#",
   illustrationImageSrc = illustration,
-  headingText = "Sign In To Treact",
+  headingText = "Log In To NoteZapp!",
   socialButtons = [
     {
       iconImageSrc: googleIconImageSrc,
-      text: "Sign In With Google",
-      url: "https://google.com"
+      text: "Log In With Google",
+      url: "https://google.com" 
     },
-    {
-      iconImageSrc: twitterIconImageSrc,
-      text: "Sign In With Twitter",
-      url: "https://twitter.com"
-    }
   ],
-  submitButtonText = "Sign In",
+  submitButtonText = "Log In",
   SubmitButtonIcon = LoginIcon,
   forgotPasswordUrl = "#",
   signupUrl = "#",
@@ -96,7 +91,7 @@ export default ({
                 ))}
               </SocialButtonsContainer>
               <DividerTextContainer>
-                <DividerText>Or Sign in with your e-mail</DividerText>
+                <DividerText>Or Log In with your e-mail</DividerText>
               </DividerTextContainer>
               <Form>
                 <Input type="email" placeholder="Email" />

@@ -66,7 +66,6 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 
 import EventLandingPage from "demos/EventLandingPage.js";
 /* Inner Pages */
-import LoginPage from "pages/Login.js";
 // import SignupPage from "pages/Signup.js";
 // import AboutUsPage from "pages/AboutUs.js";
 // import ContactUsPage from "pages/ContactUs.js";
@@ -77,6 +76,7 @@ import Login from "pages/Login.js";
 
 export default function App() {
   // return <AnimationRevealPage disabled></AnimationRevealPage>;
+  const user = null;
   return (
     <Router>
       <Switch>
@@ -87,7 +87,7 @@ export default function App() {
           <ComponentRenderer />
         </Route>
         <Route path="/pages/:name">
-          <Login/>
+          {!user ?<Login/> : <h1>Logged In</h1>}
         </Route>
         <Route path="/">
           <EventLandingPage />
