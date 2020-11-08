@@ -73,10 +73,11 @@ import EventLandingPage from "demos/EventLandingPage.js";
 import ComponentRenderer from "ComponentRenderer.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "pages/Login.js";
-
+import { useStateValue } from "StateProvider";
+import LoginUtil from "LoginUtil";
+const user = null;
 export default function App() {
   // return <AnimationRevealPage disabled></AnimationRevealPage>;
-  const user = null;
   return (
     <Router>
       <Switch>
@@ -87,7 +88,7 @@ export default function App() {
           <ComponentRenderer />
         </Route>
         <Route path="/pages/:name">
-          {!user ?<Login/> : <h1>Logged In</h1>}
+          <LoginUtil  />
         </Route>
         <Route path="/">
           <EventLandingPage />

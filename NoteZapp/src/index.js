@@ -2,10 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import Modal from "react-modal";
+import { StateProvider } from "StateProvider";
+import reducer, { initialState } from "reducer";
 
 Modal.setAppElement("#root");
 
 ReactDOM.render(
-  <App />,
+  <StateProvider initialState = {initialState} reducer={reducer}>
+    <App />
+  </StateProvider>,
   document.getElementById("root")
 );

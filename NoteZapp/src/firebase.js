@@ -1,4 +1,4 @@
-import * as firebase from 'firebase';
+import firebase from 'firebase';
 var firebaseConfig = {
   apiKey: "AIzaSyDHKp_rh0KdLAcak3eP0jITnt3f__41Ols",
   authDomain: "notezapp-26370.firebaseapp.com",
@@ -10,4 +10,10 @@ var firebaseConfig = {
   measurementId: "G-LV6KE5ND8N"
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
+
+export {auth , provider};
+export default db;

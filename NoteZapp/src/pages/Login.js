@@ -9,6 +9,10 @@ import logo from "images/logo-full.png";
 import googleIconImageSrc from "images/google-icon.png";
 import twitterIconImageSrc from "images/twitter-icon.png";
 import { ReactComponent as LoginIcon } from "feather-icons/dist/icons/log-in.svg";
+import {auth,provider} from "../firebase";
+import { useStateValue } from "../StateProvider";
+import {actionTypes} from '../reducer';
+
 
 const Container = tw(ContainerBase)`min-h-screen bg-primary-900 text-white font-medium flex justify-center -m-8`;
 const Content = tw.div`max-w-screen-xl m-0 sm:mx-20 sm:my-16 bg-white text-gray-900 shadow sm:rounded-lg flex justify-center flex-1`;
@@ -53,7 +57,7 @@ const IllustrationImage = styled.div`
   ${tw`m-12 xl:m-12 w-full max-w-xl bg-contain bg-center bg-no-repeat`}
 `;
 
-export default ({
+export default  ({
   logoLinkUrl = "#",
   illustrationImageSrc = illustration,
   headingText = "Log In To NoteZapp!",
@@ -69,7 +73,17 @@ export default ({
   forgotPasswordUrl = "#",
   signupUrl = "#",
 
-}) => (
+}) => {
+   const [state , dispatch] = useStateValue();
+   function signIn() {
+    auth.signInWithPopup(provider).then(result =>{
+      dispatch({
+        type: actionTypes.SET_USER,
+        user: result.user,
+      })
+    } ).catch(error => console.log("Error in auth " + error.message))
+}
+   return (
   <AnimationRevealPage>
     <Container>
       <Content>
@@ -82,7 +96,7 @@ export default ({
             <FormContainer>
               <SocialButtonsContainer>
                 {socialButtons.map((socialButton, index) => (
-                  <SocialButton key={index} href={socialButton.url}>
+                  <SocialButton key={index} onClick ={signIn}>
                     <span className="iconContainer">
                       <img src={socialButton.iconImageSrc} className="icon" alt=""/>
                     </span>
@@ -96,7 +110,7 @@ export default ({
               <Form>
                 <Input type="email" placeholder="Email" />
                 <Input type="password" placeholder="Password" />
-                <SubmitButton type="submit">
+                <SubmitButton type="submit" onClick = {()=>alert('This is still under devlopment!\nPlease use google signup instead!')}>
                   <SubmitButtonIcon className="icon" />
                   <span className="text">{submitButtonText}</span>
                 </SubmitButton>
@@ -121,4 +135,5 @@ export default ({
       </Content>
     </Container>
   </AnimationRevealPage>
-);
+   )
+                };
