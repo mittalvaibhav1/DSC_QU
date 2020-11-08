@@ -75,6 +75,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "pages/Login.js";
 import { useStateValue } from "StateProvider";
 import LoginUtil from "LoginUtil";
+import SearchNotes from "pages/SearchNotes";
 const user = null;
 export default function App() {
   // return <AnimationRevealPage disabled></AnimationRevealPage>;
@@ -86,6 +87,9 @@ export default function App() {
         </Route>
         <Route path="/components/:type/:name">
           <ComponentRenderer />
+        </Route>
+        <Route path="/pages/SearchNotes">
+          <SearchNotes />
         </Route>
         <Route path="/pages/:name">
           <LoginUtil  />
