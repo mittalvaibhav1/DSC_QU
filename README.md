@@ -1,2 +1,2 @@
-# DSC_QU
-DSC_QU -->  https://dschackathon.web.app/
+# Notezapp!
+DSC Quantum University hackathon -->  https://dschackathon.web.app/
